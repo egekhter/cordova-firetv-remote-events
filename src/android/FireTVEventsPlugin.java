@@ -13,7 +13,7 @@ import org.json.JSONObject;
 
 import static android.content.Context.BIND_AUTO_CREATE;
 
-public class FireTVRemoteEventsPlugin extends CordovaPlugin {
+public class FireTVEventsPlugin extends CordovaPlugin {
 
     // Plugin namespace
     private static final String JS_NAMESPACE = "FireTVEvents";
