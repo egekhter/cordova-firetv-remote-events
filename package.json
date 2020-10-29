@@ -1,0 +1,35 @@
+{
+  "name": "cordova-plugin-firetv-remote-events",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows all Fire TV remote events to be passed to WebView.",
+  "cordova": {
+    "id": "cordova-plugin-firetv-remote-events",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/egekhter/cordova-firetv-remote-events.git"
+  },
+  "keywords": [
+    "FireTV",
+    "Remote",
+    "Keyboard",
+    "Events",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Eugene Gekhter <eugene@memorable.app>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/egekhter/cordova-firetv-remote-events/issues"
+  },
+  "homepage": "https://github.com/egekhter/cordova-firetv-remote-events"
+}

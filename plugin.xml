@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-firetv-remote-events" version="0.0.1">
+    <name>FireTVRemoteEventsPlugin</name>
+
+    <description>An Android Cordova plugin that allows all Fire TV remote events to be passed to WebView</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,firetv,remote,keyboard,events</keywords>
+    <repo>https://github.com/egekhter/cordova-firetv-remote-events.git</repo>
+    <issue>https://github.com/egekhter/cordova-firetv-remote-events/issues</issue>
+
+    <js-module src="www/firetv-remote-events.js" name="FireTVEventsPlugin">
+        <clobbers target="FireTVEventsPlugin" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="FireTVEventsPlugin">
+                <param name="android-package" value="app.memorable.cordova.plugin.FireTVEventsPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/FireTVEventsPlugin.java" target-dir="src/app/memorable/cordova/plugin" />
+    </platform>
+</plugin>
