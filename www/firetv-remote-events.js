@@ -1,20 +1,37 @@
 var exec    = require('cordova/exec'),
     channel = require('cordova/channel');
 
-exports.fireEvent = function (event)
+let keyMap = {
+    "4": {
+        keyCode: 4,
+        code: "GoBack"
+    },
+    "82": {
+        keyCode: 82,
+        code: "Menu"
+    },
+};
+
+
+exports.fireEvent = function (e)
 {
-    debugger;
-    var args     = Array.apply(null, arguments).slice(1),
-        listener = this._listener[event];
+    console.log(e);
+    let data = JSON.parse(e);
 
-    if (!listener)
-        return;
-
-    for (var i = 0; i < listener.length; i++)
-    {
-        var fn    = listener[i][0],
-            scope = listener[i][1];
-
-        fn.apply(scope, args);
+    if(data.action === 'up') {
+        if(data.keyCode in keyMap) {
+            let event = keyMap[data.keyCode];
+            window.dispatchEvent(
+                new KeyboardEvent('keyup', {
+                    keyCode: event.keyCode,
+                    code: event.code,
+                    key: event.key
+                })
+            );
+        }
     }
 };
+
+exports.showKeyboard = function() {
+    exec(null, null, 'FireTVEventsPlugin', 'showKeyboard');
+}
