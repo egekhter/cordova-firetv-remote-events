@@ -22,7 +22,7 @@ exports.fireEvent = function (e)
         if(data.keyCode in keyMap) {
             let event = keyMap[data.keyCode];
             window.dispatchEvent(
-                new KeyboardEvent('keyup', {
+                new KeyboardEvent('keydown', {
                     keyCode: event.keyCode,
                     code: event.code,
                     key: event.key

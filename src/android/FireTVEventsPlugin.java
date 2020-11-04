@@ -19,4 +19,50 @@ public class FireTVEventsPlugin extends CordovaPlugin {
 
         return false;
     }
+
+//     @Override
+//     public boolean onKeyDown(int keyCode, KeyEvent event) {
+//         if(!android.os.Build.MODEL.contains("AFT")) {
+//             return super.onKeyDown(keyCode, event);
+//         }
+//
+//         JSONObject key_data = new JSONObject();
+//
+//         try {
+//             key_data.put("action", "down");
+//             key_data.put("keyCode", keyCode);
+//         } catch (JSONException e) {
+//             e.printStackTrace();
+//         }
+//
+//         String js = String.format("javascript:FireTVEventsPlugin.fireEvent('%s');",
+//                 key_data.toString());
+//
+//         this.loadUrl(js);
+//
+//         return true;
+//     }
+//
+//     @Override
+//     public boolean onKeyUp(int keyCode, KeyEvent event) {
+//         if(!android.os.Build.MODEL.contains("AFT")) {
+//             return super.onKeyDown(keyCode, event);
+//         }
+//
+//         JSONObject key_data = new JSONObject();
+//
+//         try {
+//             key_data.put("action", "up");
+//             key_data.put("keyCode", keyCode);
+//         } catch (JSONException e) {
+//             e.printStackTrace();
+//         }
+//
+//         String js = String.format("javascript:FireTVEventsPlugin.fireEvent('%s');",
+//                 key_data.toString());
+//
+//         this.loadUrl(js);
+//
+//         return true;
+//     }
 }
